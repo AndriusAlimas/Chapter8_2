@@ -11,9 +11,19 @@
   	<servlet-class>com.example.servlet.MyController</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>jsp_servlet</servlet-name>
+  	<jsp-file>/view.jsp</jsp-file>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>MyServlet</servlet-name>
   	<url-pattern>/control.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>jsp_servlet</servlet-name>
+  	<url-pattern>/go.jsp</url-pattern>
   </servlet-mapping>
   
 </web-app>
