@@ -11,6 +11,8 @@
 exist, we do inside body to create new bean object and set default values -->
 <jsp:useBean id="person_object" class="foo.other.Person" scope="request">
 	<jsp:setProperty name="person_object" property="name" value="NEW_DEFAULT_NAME" />
+new bean object created using request scope, because there was no bean
+with this id and scope, we just gave a default name : 
 	<jsp:getProperty name="person_object" property="name" />
 </jsp:useBean>
 </body>
