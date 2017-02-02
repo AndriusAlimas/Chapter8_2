@@ -11,7 +11,10 @@ public class MyController extends HttpServlet {
 			throws ServletException, IOException {
 		String p_name = request.getParameter("person_name");
 		Person person = new Person();
-		request.setAttribute("person_object", (Object) person);
+		
+		// to see  result we need change scope to different than bean object:
+		HttpSession session = request.getSession();
+		session.setAttribute("person_object", (Object) person);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("go.jsp");
 		rd.forward(request, response);
