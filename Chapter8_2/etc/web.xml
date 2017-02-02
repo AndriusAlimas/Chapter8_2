@@ -26,4 +26,12 @@
   	<url-pattern>/go.jsp</url-pattern>
   </servlet-mapping>
   
+  <jsp-config>
+  	<jsp-property-group>
+  		<url-pattern>*.jsp</url-pattern>
+  		<el-ignored>false</el-ignored>
+  		<scripting-invalid>false</scripting-invalid>
+  	</jsp-property-group>
+  </jsp-config>
+  
 </web-app>
