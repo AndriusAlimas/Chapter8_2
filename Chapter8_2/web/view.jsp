@@ -7,6 +7,11 @@
 <title>View</title>
 </head>
 <body>
-
+<!-- We have body and inside body its conditional if bean object doesnot
+exist, we do inside body to create new bean object and set default values -->
+<jsp:useBean id="person_object" class="foo.other.Person" scope="request">
+	<jsp:setProperty name="person_object" property="name" value="NEW_DEFAULT_NAME" />
+	<jsp:getProperty name="person_object" property="name" />
+</jsp:useBean>
 </body>
 </html>
